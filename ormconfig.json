@@ -1,0 +1,48 @@
+[
+ 
+{
+   "name": "development",
+   "type": "postgres",
+   "host": "localhost",
+   "port": 5432,
+   "username": "postgres",
+   "password": "Password@1",
+   "database": "lived_in_dev",
+   "synchronize": true,
+   "logging": true,
+   "entities": ["src/entity/**/*.**"],
+   "migrations": ["src/migration/**/*.**"],
+   "subscribers": ["src/subscriber/**/*.**"],
+   "cli": {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
+   }
+},
+{
+   "name": "production",
+   "type": "postgres",
+   "host": "localhost",
+   "port": 5432,
+   "username": "postgres",
+   "password": "Password@1",
+   "database": "lived_in",
+   "synchronize": false,
+   "logging": false,
+   "entities": [
+      "src/entity/**/*.**"
+   ],
+   "migrations": [
+      "src/migration/**/*.**"
+   ],
+   "subscribers": [
+      "src/subscriber/**/*.**"
+   ],
+   "cli": {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
+   }
+}
+
+]
